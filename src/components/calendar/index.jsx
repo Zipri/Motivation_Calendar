@@ -68,6 +68,7 @@ export default class Calendar extends React.Component {
 
         return (
             <div className="calendar">
+{/* ---------------------------------------------------------------------------------------------------MAIN_CALENDAR-*/}
                 <header>
                     <button onClick={this.handlePrevMonthButtonClick}>{'<'}</button>
                     <select

@@ -1,25 +1,34 @@
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {BrowserRouter as Router, Switch, Route, Link,
+        Redirect, useHistory, useLocation} from "react-router-dom";
 
-import Calendar from './components/calendar'
+import CalendarPage from './components/pages/calendarPage'
+import {AuthButton, ProvideAuth} from "./fakeAuth";
 
 class App extends React.Component {
-  state = {
-      selectedDate: null
-  }
-  handleDateChange = selectedDate => this.setState({ selectedDate });
-
   render() {
-    const { selectedDate } = this.state;
-
     return (
-        <div>
-            {selectedDate && <pt>Выбранная дата: {selectedDate.toLocaleDateString()} </pt>}
-            <pt>Сегодняшняя дата: {new Date().toLocaleDateString()} </pt>
+        <ProvideAuth>
+          <Router>
+            <div>
+              <AuthButton />
 
-            <Calendar
-                onChange = {this.handleDateChange}
-            />
-        </div>
+              <ul>
+                <li>
+                  <Link to="/m_calendar">Motivation Calendar</Link>
+                </li>
+              </ul>
+
+              <Switch>
+                <Route path="/m_calendar">
+                  <CalendarPage />
+                </Route>
+              </Switch>
+
+            </div>
+          </Router>
+        </ProvideAuth>
     );
   }
 }
