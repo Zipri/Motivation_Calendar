@@ -3,8 +3,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Switch, Route, Link,
         Redirect, useHistory, useLocation} from "react-router-dom";
 
-import CalendarPage from './components/pages/calendarPage'
-import {AuthButton, ProvideAuth} from "./fakeAuth";
+import CalendarPage from './pages/calendarPage'
+import {AuthButton, PrivateRoute, ProvideAuth} from "./fakeAuth";
+import ToDoListPage from "./pages/toDoPage";
+import LoginPage from "./pages/loginPage";
 
 class App extends React.Component {
   render() {
@@ -16,14 +18,23 @@ class App extends React.Component {
 
               <ul>
                 <li>
-                  <Link to="/m_calendar">Motivation Calendar</Link>
+                  <Link to="/Calendar">Motivation Calendar</Link>
+                </li>
+                <li>
+                  <Link to="/ToDo">Motivation ToDo list</Link>
                 </li>
               </ul>
 
               <Switch>
-                <Route path="/m_calendar">
+                <Route path="/Calendar">
                   <CalendarPage />
                 </Route>
+                <Route path="/LogIn">
+                  <LoginPage />
+                </Route>
+                <PrivateRoute path="/ToDo">
+                  <ToDoListPage />
+                </PrivateRoute>
               </Switch>
 
             </div>

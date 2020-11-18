@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import * as calendar from './calendar'
 
-import './index.css'
+import './index_calendar.css'
 
 export default class Calendar extends React.Component {
     static defaultProps = {
