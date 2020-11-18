@@ -1,0 +1,67 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #585757;
+}
+
+li a {
+    display: block;
+    color: #c8c7c7;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #b16a2f;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+/* Боковое навигационное меню */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 ширина - изменить это с помощью JavaScript */
+    position: fixed; /* Оставайтесь на месте */
+    z-index: 1; /* Оставайтесь сверху */
+    top: 0; /* Оставайтесь наверху */
+    left: 0;
+    background-color: #575657; /* Фон черный*/
+    overflow-x: hidden; /* Отключить горизонтальную прокрутку */
+    padding-top: 60px; /* Поместите контент в 60px сверху */
+    transition: 0.5s; /* 0.5 второй эффект перехода слайда в боковой навигации */
+}
+
+/* Ссылки меню навигации */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Положение и стиль кнопки закрытия (верхний правый угол) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 29px;
+    margin-left: 50px;
+}
+
+/* Положение и стиль кнопки закрытия (верхний правый угол) */
+.openbtn {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    font-size: 29px;
+    margin-left: 50px;
+}
+

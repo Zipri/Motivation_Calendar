@@ -1,5 +1,5 @@
 import React from "react";
-import {useHistory, useLocation} from "react-router-dom";
+import {Link, useHistory, useLocation} from "react-router-dom";
 import {useAuth} from "../fakeAuth";
 
 export default function LoginPage() {

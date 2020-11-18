@@ -1,5 +1,6 @@
 import React from "react";
 import Calendar from "../components/calendar/index_calendar";
+import ReactDOM from 'react-dom'
 
 export default class CalendarPage extends React.Component {
     state = {

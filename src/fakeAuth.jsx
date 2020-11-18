@@ -1,5 +1,6 @@
 import React, {createContext, useContext, useState} from 'react';
 import {Redirect, Route, useHistory} from "react-router-dom";
+import "./fakeAuth.css"
 
 
 const fakeAuth = {
@@ -66,7 +67,7 @@ export function AuthButton() {
                     auth.signout(() => history.push("/"));
                 }}
             >
-                Sign out
+                Sing out
             </button>
         </p>
     ) : (
